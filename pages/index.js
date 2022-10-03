@@ -17,13 +17,13 @@ export default function Home(props) {
     }
    }, [data]);
   
-  function previous(page) {
+  function previous() {
     if(page > 1)
-    setPage(page--);
+    setPage(page - 1);
   }
 
-  function next(page) {
-    setPage(page++);
+  function next() {
+    setPage(page + 1);
   }
   return (
     <>
@@ -41,9 +41,9 @@ export default function Home(props) {
       </Accordion>
       <br />
       <Pagination>
-        <Pagination.Prev />
+        <Pagination.Prev onClick={previous}/>
         <Pagination.Item>{page}</Pagination.Item>
-        <Pagination.Next />
+        <Pagination.Next onClick={next}/>
       </Pagination>
       
     </>
