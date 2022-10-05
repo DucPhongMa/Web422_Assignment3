@@ -10,7 +10,7 @@ export default function MovieTitle() {
 
     const { data, error } = useSWR(`https://tough-erin-sheath-dress.cyclic.app/api/movies?page=1&perPage=10&title=${title}`);
 
-    if(data == null){
+    if(data == null || data == undefined){
       return null
     }
     else{
