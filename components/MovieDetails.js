@@ -6,7 +6,7 @@ export default function MovieDetails(props) {
        <Container>
         <Row>
           {props.movie.poster &&
-            <Col md><img src={props.movie.poster} alt="poster"/><br /><br /></Col>
+            <Col md><img src={props.movie.poster} alt="poster" className="w-100"/><br /><br /></Col>
           }
           <Col md>
             <strong>Directed By:</strong> {props.movie.directors.join(',')}<br /><br />

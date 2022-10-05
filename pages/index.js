@@ -19,11 +19,11 @@ export default function Home(props) {
   
   function previous() {
     if(page > 1)
-    setPage(page - 1);
+    setPage(prev => prev - 1);
   }
 
   function next() {
-    setPage(page + 1);
+    setPage(prev => prev + 1);
   }
   return (
     <>
